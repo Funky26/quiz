@@ -2,17 +2,10 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class question : MonoBehaviour
+[System.Serializable]
+public class question
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    public string questions;
+    public bool isTrue;
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
 }
