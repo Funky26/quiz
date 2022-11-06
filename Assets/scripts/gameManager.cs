@@ -16,16 +16,36 @@ public class gameManager : MonoBehaviour
 
     private float delay = 2f;
 
-    // Start is called before the first frame update
+    public GameObject smileyF;
+    public GameObject sadF;
+
+    //timer
+    public float time = 10;
+    public TextMeshProUGUI textBox;
+    private float zero = 0;
+
     void Start()
     {
         if (unanswaredQ == null || unanswaredQ.Count==0)
         {
             unanswaredQ = questions.ToList<question>();
+
+            //timer
+            textBox.text = time.ToString();
         }
 
         getRandomQ();
         
+    }
+    void Update()
+    {
+        //timer
+        time -= Time.deltaTime;
+        textBox.text = Mathf.Round(time).ToString();
+        if(textBox.text == zero.ToString())
+        {
+            StartCoroutine(TransitionTonextQ());
+        }
     }
 
     void getRandomQ()
@@ -42,11 +62,13 @@ public class gameManager : MonoBehaviour
     {
         if(currQ.isTrue)
         {
-            Debug.Log("Correct");       
+            Debug.Log("Correct");
+            smileyF.SetActive(true);
         }
         else
         {
             Debug.Log("Incorrect");
+            sadF.SetActive(true);
         }
 
         StartCoroutine(TransitionTonextQ());
@@ -57,10 +79,12 @@ public class gameManager : MonoBehaviour
         if (!currQ.isTrue)
         {
             Debug.Log("Correct");
+            smileyF.SetActive(true);
         }
         else
         {
             Debug.Log("Incorrect");
+            sadF.SetActive(true);
         }
         StartCoroutine(TransitionTonextQ());
     }
