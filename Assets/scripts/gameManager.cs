@@ -24,8 +24,12 @@ public class gameManager : MonoBehaviour
     public TextMeshProUGUI textBox;
     private float zero = 0;
 
+    public TextMeshProUGUI numberQ;
+    private float one = 1;
+
     void Start()
     {
+
         if (unanswaredQ == null || unanswaredQ.Count==0)
         {
             unanswaredQ = questions.ToList<question>();
@@ -46,6 +50,7 @@ public class gameManager : MonoBehaviour
         {
             StartCoroutine(TransitionTonextQ());
         }
+
     }
 
     void getRandomQ()
@@ -70,7 +75,8 @@ public class gameManager : MonoBehaviour
             Debug.Log("Incorrect");
             sadF.SetActive(true);
         }
-
+        //one++;
+        //numberQ.text = "QUESTION N." + one;
         StartCoroutine(TransitionTonextQ());
     }
 
@@ -86,6 +92,8 @@ public class gameManager : MonoBehaviour
             Debug.Log("Incorrect");
             sadF.SetActive(true);
         }
+        //one++;
+        //numberQ.text = "QUESTION N." + one;
         StartCoroutine(TransitionTonextQ());
     }
 
