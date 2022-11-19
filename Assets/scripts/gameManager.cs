@@ -25,7 +25,7 @@ public class gameManager : MonoBehaviour
     private float zero = 0;
 
     public TextMeshProUGUI numberQ;
-    private float one = 1;
+
 
     void Start()
     {
@@ -75,8 +75,6 @@ public class gameManager : MonoBehaviour
             Debug.Log("Incorrect");
             sadF.SetActive(true);
         }
-        //one++;
-        //numberQ.text = "QUESTION N." + one;
         StartCoroutine(TransitionTonextQ());
     }
 
@@ -92,8 +90,6 @@ public class gameManager : MonoBehaviour
             Debug.Log("Incorrect");
             sadF.SetActive(true);
         }
-        //one++;
-        //numberQ.text = "QUESTION N." + one;
         StartCoroutine(TransitionTonextQ());
     }
 
@@ -104,8 +100,5 @@ public class gameManager : MonoBehaviour
         yield return new WaitForSeconds(delay);
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
-
-
-    //11.55
 }
 
