@@ -403,6 +403,57 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
+--- !u!1 &641467940
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 641467942}
+  - component: {fileID: 641467941}
+  m_Layer: 0
+  m_Name: QuestionManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &641467941
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 641467940}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 79c584b813c60fd4f8a5c46364a3498d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gm: {fileID: 1016946597}
+  smileyFace: {fileID: 53916641}
+  True: {fileID: 1194124186}
+  False: {fileID: 644430146}
+  questionCount: 5
+  answeredQuestions: 0
+  rightAnswers: 0
+--- !u!4 &641467942
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 641467940}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 340.12692, y: 183.49112, z: -105.34864}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 5
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &644430144
 GameObject:
   m_ObjectHideFlags: 0
@@ -490,18 +541,6 @@ MonoBehaviour:
       - m_Target: {fileID: 1016946599}
         m_TargetAssemblyTypeName: gameManager, Assembly-CSharp
         m_MethodName: UserSelectF
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 1016946600}
-        m_TargetAssemblyTypeName: AnswereQuestion, Assembly-CSharp
-        m_MethodName: OnClick
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -795,7 +834,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1016946598}
   - component: {fileID: 1016946599}
-  - component: {fileID: 1016946600}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -857,26 +895,6 @@ MonoBehaviour:
   time: 5
   textBox: {fileID: 1075768145}
   numberQ: {fileID: 1958940674}
-  answers: 10
-  answered: 1
-  answeredR: 1
---- !u!114 &1016946600
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1016946597}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 79c584b813c60fd4f8a5c46364a3498d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  gm: {fileID: 1016946597}
-  smileyFace: {fileID: 53916641}
-  questionCount: 5
-  answeredQuestions: 0
-  rightAnswers: 0
 --- !u!1 &1075768143
 GameObject:
   m_ObjectHideFlags: 0
@@ -1099,18 +1117,6 @@ MonoBehaviour:
       - m_Target: {fileID: 1016946599}
         m_TargetAssemblyTypeName: gameManager, Assembly-CSharp
         m_MethodName: UserSelectT
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 1016946600}
-        m_TargetAssemblyTypeName: AnswereQuestion, Assembly-CSharp
-        m_MethodName: OnClick
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
