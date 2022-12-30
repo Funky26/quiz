@@ -5,19 +5,9 @@ using UnityEngine.SceneManagement;
 
 public class start : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+    public string scene;
     public void PlayGame()
     {
-        SceneManager.LoadScene("quiz");
+        SceneManager.LoadScene(scene);
     }
 }

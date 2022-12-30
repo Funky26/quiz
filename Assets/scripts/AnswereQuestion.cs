@@ -32,14 +32,9 @@ public class AnswereQuestion : MonoBehaviour
         {
             Instance = this;
         }
-    }
-
-
-    void Start()
-    {
+        //DontDestroyOnLoad(this);
         answeredQuestions++;
     }
-
     void Update()
     {
         True.onClick.AddListener(QuestionCount);

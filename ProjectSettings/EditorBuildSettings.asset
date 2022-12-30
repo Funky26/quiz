@@ -6,9 +6,15 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/PlayAgain.unity
-    guid: 9fc0d4010bbf28b4594072e72b8655ab
+    path: Assets/Scenes/menu.unity
+    guid: 5cef3bdfc7857cc46bb5813be6a9bdd0
   - enabled: 1
     path: Assets/Scenes/quiz.unity
     guid: 3d04e85a90b434647abab6dfe4be58d8
+  - enabled: 1
+    path: Assets/Scenes/PlayAgain.unity
+    guid: 9fc0d4010bbf28b4594072e72b8655ab
+  - enabled: 1
+    path: Assets/Scenes/egg.unity
+    guid: 14a4399ee6fd0a74889f47ac03b3dfbe
   m_configObjects: {}

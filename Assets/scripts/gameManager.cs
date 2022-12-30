@@ -16,8 +16,8 @@ public class gameManager : MonoBehaviour
 
     private float delay = 2f;
 
-    public GameObject smileyF;
-    public GameObject sadF;
+    //public GameObject smileyF;
+    //public GameObject sadF;
 
     //timer
     public float time = 10;
@@ -26,6 +26,13 @@ public class gameManager : MonoBehaviour
 
     public TextMeshProUGUI numberQ;
 
+    //new graphic
+    public GameObject rightAnswer;
+    public GameObject wrongAnswer;
+
+    public GameObject btnClickedT;
+    public GameObject btnClickedF;
+    public GameObject ranOutOfTime;
 
     void Start()
     {
@@ -49,6 +56,7 @@ public class gameManager : MonoBehaviour
         if(textBox.text == zero.ToString())
         {
             StartCoroutine(TransitionTonextQ());
+            ranOutOfTime.SetActive(true);
         }
 
     }
@@ -68,12 +76,20 @@ public class gameManager : MonoBehaviour
         if(currQ.isTrue)
         {
             Debug.Log("Correct");
-            smileyF.SetActive(true);
+            //smileyF.SetActive(true);
+            rightAnswer.SetActive(true);
+            btnClickedT.SetActive(true);
+
+            Destroy(textBox);
         }
         else
         {
             Debug.Log("Incorrect");
-            sadF.SetActive(true);
+            //sadF.SetActive(true);
+            wrongAnswer.SetActive(true);
+            btnClickedT.SetActive(true);
+
+            Destroy(textBox);
         }
         StartCoroutine(TransitionTonextQ());
     }
@@ -83,12 +99,18 @@ public class gameManager : MonoBehaviour
         if (!currQ.isTrue)
         {
             Debug.Log("Correct");
-            smileyF.SetActive(true);
+            rightAnswer.SetActive(true);
+            btnClickedF.SetActive(true);
+
+            Destroy(textBox);
         }
         else
         {
             Debug.Log("Incorrect");
-            sadF.SetActive(true);
+            wrongAnswer.SetActive(true);
+            btnClickedF.SetActive(true);
+
+            Destroy(textBox);
         }
         StartCoroutine(TransitionTonextQ());
     }
